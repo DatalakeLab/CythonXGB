@@ -13,7 +13,7 @@ import time
 from sklearn.datasets import make_regression, make_classification
 from libc.stdio cimport printf
 
-def test_xgb_regression(n_samples = 100000, n_features = 30, n_estimators = 50, depth = 15):
+def test_xgb_regression(n_samples = 10000, n_features = 20, n_estimators = 3, depth = 11):
     '''
     correctness and performance test for C-xgb for regression tasks
     '''
@@ -149,5 +149,3 @@ def test_xgb_logistic_regression(n_samples = 10000, n_features = 20, n_estimator
     print "XGBoost mean time: %f" % (time_xgb)
     print "C_XGBoost mean time: %f" % (time_c_xgb)
     print "ACCELERATION IS %f TIMES\n" % (time_xgb / time_c_xgb)
-
-
