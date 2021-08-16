@@ -8,12 +8,12 @@ cdef extern from "c_xgb/c_xgb.cpp":
 import numpy as np
 import xgboost as xgb
 import numpy as np
-import cPickle as pickle
+import pickle
 import time
 from sklearn.datasets import make_regression, make_classification
 from libc.stdio cimport printf
 
-def test_xgb_regression(n_samples = 10000, n_features = 20, n_estimators = 3, depth = 11):
+def test_xgb_regression(n_samples = 100000, n_features = 30, n_estimators = 50, depth = 15):
     '''
     correctness and performance test for C-xgb for regression tasks
     '''
